@@ -10,7 +10,7 @@ General Reading on Pred Code Networks: https://arxiv.org/pdf/2107.12979.pdf
 https://www.mrcbndu.ox.ac.uk/sites/default/files/pdf_files/Whittington%20Bogacz%202017_Neural%20Comput.pdf
 
 ----
-Since I found the paper to be somewhat different and dense, I have attached my notes:
+Since I found the paper to be somewhat different and dense, I have attached my notes for now, LaTex soon:
 
 ![notes/page_22.png](notes/page_22.png)
 ![notes/page_23.png](notes/page_23.png)
