@@ -1,6 +1,17 @@
 # predictive-coding
 Python implementation of An Approximation of the Error Backpropagation Algorithm in a Predictive Coding Network with Local Hebbian Synaptic Plasticity
 
+----
+Task list:
+- [x] XOR example
+- [x] Arbitrary Scalable
+- [] JAX
+- [] Add ReLU + TanH + Sigmoid activation options
+
+
+
+
+
 ---
 Pred Code Networks are amazing because they don't rely on a Global Loss function, but rather use a bidirectional networks to use local errors that leads to learning.
 
