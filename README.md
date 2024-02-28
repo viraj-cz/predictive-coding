@@ -5,12 +5,9 @@ Python implementation of An Approximation of the Error Backpropagation Algorithm
 Task list:
 - [x] XOR example
 - [x] Arbitrary Scalable
-- [] JAX
-- [] Add ReLU + TanH + Sigmoid activation options
-
-
-
-
+- [x] Add ReLU + TanH + Sigmoid activation options
+    - [ ] Sigmoid stagnates
+- [ ] JAX & GPUs
 
 ---
 Pred Code Networks are amazing because they don't rely on a Global Loss function, but rather use a bidirectional networks to use local errors that leads to learning.
