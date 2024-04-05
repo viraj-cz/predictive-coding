@@ -6,8 +6,12 @@ Task list:
 - [x] XOR example
 - [x] Arbitrary Scalable
 - [x] Add ReLU + TanH + Sigmoid activation options
-    - [ ] Sigmoid stagnates
-- [ ] JAX & GPUs
+    - [ ] Sigmoid stagnates for XOR
+- [x] PyTorch
+- [ ] LaTex
+
+Later:
+- [ ] JAX 
 
 ---
 Pred Code Networks are amazing because they don't rely on a Global Loss function, but rather use a bidirectional networks to use local errors that leads to learning.

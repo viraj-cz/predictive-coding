@@ -22,7 +22,7 @@ def f_b_sigmoid(x, alpha):
 def f_b_clipped_relu(x):
   f_n = np.maximum(x,0)
   f_n = np.minimum(f_n, 1)
-  f_p = ((x > 0) & (x < 1)).astype(x.dtype)
+  f_p = ((x > 0) & (x <= 1)).astype(x.dtype)
   return f_n, f_p
 
 def f(x, act_type, alpha):
@@ -35,8 +35,11 @@ def f(x, act_type, alpha):
   elif act_type == "SIGMOID":
     f_n, f_p = f_b_sigmoid(x, alpha)
     return f_n
+  elif act_type == "CLIPPED_RELU":
+    f_n, f_p = f_b_clipped_relu(x)
+    return f_n
   else:
-    raise("invalid actiavtion function")
+    raise ValueError("invalid actiavtion function")
 
 def f_b(x, act_type, alpha):
   if act_type == "RELU":
@@ -48,5 +51,8 @@ def f_b(x, act_type, alpha):
   elif act_type == "SIGMOID":
     f_n, f_p = f_b_sigmoid(x,alpha)
     return f_n, f_p
+  elif act_type == "CLIPPED_RELU":
+    f_n, f_p = f_b_clipped_relu(x)
+    return f_n, f_p
   else:
-    raise("invalid actiavtion function")
+    raise ValueError("invalid actiavtion function")
