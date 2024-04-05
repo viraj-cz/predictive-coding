@@ -19,6 +19,12 @@ def f_b_sigmoid(x, alpha):
   f_p = f_n * (1 - f_n)
   return f_n, f_p
 
+def f_b_clipped_relu(x):
+  f_n = np.maximum(x,0)
+  f_n = np.minimum(f_n, 1)
+  f_p = ((x > 0) & (x < 1)).astype(x.dtype)
+  return f_n, f_p
+
 def f(x, act_type, alpha):
   if act_type == "RELU":
     f_n, f_p = f_b_relu(x)
