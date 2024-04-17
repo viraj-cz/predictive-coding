@@ -4,9 +4,9 @@ f_n = activation(x)
 f_b = derivative of f_n wrt x
 '''
 
-def f_b_relu(x):
-  f_n = np.maximum(x,0)
-  f_p = (x > 0).astype(x.dtype)
+def f_b_relu(x, alpha=1):
+  f_n = np.maximum(alpha * x,0)
+  f_p = (x > 0).astype(x.dtype) * alpha
   return f_n, f_p
 
 def f_b_tanh(x):
@@ -27,7 +27,7 @@ def f_b_clipped_relu(x):
 
 def f(x, act_type, alpha):
   if act_type == "RELU":
-    f_n, f_p = f_b_relu(x)
+    f_n, f_p = f_b_relu(x, alpha)
     return f_n
   elif act_type == "TANH":
     f_n, f_p = f_b_tanh(x)
@@ -43,7 +43,7 @@ def f(x, act_type, alpha):
 
 def f_b(x, act_type, alpha):
   if act_type == "RELU":
-    f_n, f_p = f_b_relu(x)
+    f_n, f_p = f_b_relu(x,alpha)
     return f_n, f_p
   elif act_type == "TANH":
     f_n, f_p = f_b_tanh(x)
