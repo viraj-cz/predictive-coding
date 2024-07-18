@@ -1,1 +1,1 @@
-__all__ = ["np_forward", "np_functions", "np_infer", "np_init", "np_learn", "np_loss", "torch_forward", "torch_functions", "torch_infer", "torch_init", "torch_learn", "torch_loss" ]
+__all__ = ["np_forward", "np_functions", "np_infer", "np_init", "np_learn", "np_loss", "torch_forward", "torch_functions", "torch_infer", "torch_init", "torch_learn", "torch_loss", "iPC_infer", "iPC_learn" ]
